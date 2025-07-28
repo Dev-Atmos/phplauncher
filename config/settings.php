@@ -1,4 +1,5 @@
 <?php
+
 return [
     'roots' => [
         'WAMP' => 'D:\\wamp64\\www',

@@ -1,0 +1,43 @@
+Request received
+Selected root: WAMP, PHP: , Project: 
+Returning URL: http://127.0.0.1:8309
+Request received
+Selected root: WAMP, PHP: , Project: 
+Executing command: cd /d "D:\wamp64\www\project2" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8210
+Returning URL: http://127.0.0.1:8210
+Request received
+Selected root: WAMP, PHP: , Project: 
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8074
+Returning URL: http://127.0.0.1:8074
+Request received
+Selected root: WAMP, PHP: , Project: 
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8860
+[2025-07-28 07:45:05] Launching: project1 on http://127.0.0.1:8860
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8180
+[2025-07-28 07:47:50] Launching: project1 on http://127.0.0.1:8180
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8309
+[2025-07-28 07:51:14] Launching: project1 on http://127.0.0.1:8309
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8317
+[2025-07-28 07:53:03] Launching: project1 on http://127.0.0.1:8317
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php7.4.33\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php7.4.33\php.exe" -S 127.0.0.1:8400
+[2025-07-28 07:57:27] Launching: project1 on http://127.0.0.1:8400
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8381
+[2025-07-28 08:02:02] Launching: project1 on http://127.0.0.1:8381
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php7.4.33\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php7.4.33\php.exe" -S 127.0.0.1:8877
+[2025-07-28 08:02:40] Launching: project1 on http://127.0.0.1:8877
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8287
+[2025-07-28 08:04:41] Launching: project1 on http://127.0.0.1:8287

@@ -49,7 +49,7 @@ Serve public/index.php via WAMP or XAMPP's Apache server.
 Create a .bat file to launch Apache and open the launcher:
 
 bat
-start "" "http://localhost/phpLauncher/public/index.php"
+start "" "http://127.0.0.1/phpLauncher/public/index.php"
 Open your launcher in the browser and select a project + PHP version.
 
 🧪 Notes

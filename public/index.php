@@ -1,6 +1,11 @@
 <?php
+
+// var_dump($_SERVER);
+
 $settings = require __DIR__ . '/../config/settings.php';
 require_once __DIR__ . '/../src/Launcher.php';
+require_once __DIR__ . '/../config/config.php';
+
 
 $roots = $settings['roots'];
 $versions = $settings['phpVersions'];
@@ -12,14 +17,7 @@ if ($selectedRoot && isset($roots[$selectedRoot])) {
     $projects = Launcher::scanProjects($roots[$selectedRoot]);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['project'], $_POST['php'])) {
-    $project = $_POST['project'];
-    $phpExec = $versions[$_POST['php']] ?? null;
-    $port = rand(8000, 8999); // Random port for simplicity
-    $url = Launcher::launch($roots[$selectedRoot], $project, $phpExec, $port);
-    echo "<script>window.open('$url', '_blank');</script>";
-    exit;
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['project'], $_POST['ph
         <div class="card shadow-sm">
             <div class="card-body">
 
-                <form method="POST">
+                <form id="launchForm" method="POST">
                     <!-- Root Folder Selector -->
                     <div class="mb-3">
                         <label class="form-label">📂 Root Directory:</label>
@@ -77,6 +75,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['project'], $_POST['ph
                         <button type="submit" class="btn btn-primary w-100">🚀 Launch Project</button>
                     <?php endif; ?>
                 </form>
+                <div id="launchMessage">
+                    <p>Project Details</p>
+                    <ul>
+                        <li><strong>Root:</strong> <span id="rootDetail"></span></li>
+                        <li><strong>Project:</strong> <span id="projectDetail"></span></li>
+                        <li><strong>PHP Version:</strong> <span id="phpDetail"></span></li>
+                        <li><strong>Launch URL:</strong> <span id="launchUrlDetail"></span></li>
+                    </ul>
+                </div>
 
                 <?php if ($url): ?>
                     <div class="alert alert-success mt-4">
@@ -90,6 +97,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['project'], $_POST['ph
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('launchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            fetch('<?= getBaseUrl() ?>launch.php', {
+                    method: 'POST',
+                    body: new FormData(this)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('Got:', data.url);
+                    document.getElementById('rootDetail').innerHTML = data.root;
+                    document.getElementById('projectDetail').innerHTML = data.project;
+                    document.getElementById('phpDetail').innerHTML = data.php;
+                    if (data.url) {
+                        document.getElementById('launchUrlDetail').innerHTML = `<div class="alert alert-success mt-4">
+                            Project launched! <a href="${data.url}" target="_blank">${data.url}</a>
+                        </div>`;
+                    } else {
+                        document.getElementById('launchUrlDetail').innerHTML = `<div class="alert alert-danger mt-4">
+                            Launch failed: ${data.error || 'Unknown error'}
+                        </div>`;
+                    }
+                    // You can still open or display it
+                });
+
+        });
+    </script>
 </body>
 
 </html>
