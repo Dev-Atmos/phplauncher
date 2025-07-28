@@ -32,6 +32,16 @@ if ($selectedRoot && isset($roots[$selectedRoot])) {
 <body class="bg-light">
     <div class="container py-5">
         <h3 class="text-center mb-4">🧰 PHP Project Toolkit</h3>
+        <nav>
+            <ul class="nav justify-content-center mb-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= getBaseUrl() ?>index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="<?= getBaseUrl() ?>server-manager.php">Server Manager</a>
+                </li>
+            </ul>
+        </nav>
         <div class="card shadow-sm">
             <div class="card-body">
 
