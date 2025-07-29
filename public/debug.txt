@@ -57,3 +57,11 @@ Request received
 Selected root: WAMP, PHP: D:\wamp64\bin\php\php5.6.40\php.exe, Project: project1
 Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php5.6.40\php.exe" -S 127.0.0.1:8294
 [2025-07-28 09:11:43] Launching: project1 on http://127.0.0.1:8294
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php8.3.6\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php8.3.6\php.exe" -S 127.0.0.1:8618
+[2025-07-28 10:43:56] Launching: project1 on http://127.0.0.1:8618
+Request received
+Selected root: WAMP, PHP: D:\wamp64\bin\php\php8.3.6\php.exe, Project: project1
+Executing command: cd /d "D:\wamp64\www\project1" && start "" "D:\wamp64\bin\php\php8.3.6\php.exe" -S 127.0.0.1:8373
+[2025-07-28 10:47:57] Launching: project1 on http://127.0.0.1:8373

@@ -12,3 +12,5 @@ Project launched: http://127.0.0.1:8500
 Project launched: http://127.0.0.1:8840
 Project launched: http://127.0.0.1:8490
 Project launched: http://127.0.0.1:8294
+Project launched: http://127.0.0.1:8618
+Project launched: http://127.0.0.1:8373
